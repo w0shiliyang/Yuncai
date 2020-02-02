@@ -7,7 +7,7 @@
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "pop/POPPropertyAnimation.h"
+#import <pop/POPPropertyAnimation.h>
 
 /**
  @abstract A concrete decay animation class.

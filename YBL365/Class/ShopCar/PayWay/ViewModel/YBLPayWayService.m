@@ -287,16 +287,16 @@
                                                            if([WXApi isWXAppInstalled]) // 判断 用户是否安装微信
                                                            {
                                                                //调起微信支付
-                                                               PayReq* req             = [[PayReq alloc] init];
-                                                               req.openID              = self.viewModel.wxPayParaDict[@"appid"];
-                                                               req.partnerId           = self.viewModel.wxPayParaDict[@"partnerid"];
-                                                               req.prepayId            = self.viewModel.wxPayParaDict[@"prepayid"];
-                                                               req.nonceStr            = self.viewModel.wxPayParaDict[@"noncestr"];
-                                                               req.timeStamp           = (UInt32)[self.viewModel.wxPayParaDict[@"timestamp"] intValue];
-                                                               req.package             = self.viewModel.wxPayParaDict[@"package"];;
-                                                               req.sign                = self.viewModel.wxPayParaDict[@"sign"];
-                                                               
-                                                               [WXApi sendReq:req];
+//                                                               PayReq* req             = [[PayReq alloc] init];
+//                                                               req.openID              = self.viewModel.wxPayParaDict[@"appid"];
+//                                                               req.partnerId           = self.viewModel.wxPayParaDict[@"partnerid"];
+//                                                               req.prepayId            = self.viewModel.wxPayParaDict[@"prepayid"];
+//                                                               req.nonceStr            = self.viewModel.wxPayParaDict[@"noncestr"];
+//                                                               req.timeStamp           = (UInt32)[self.viewModel.wxPayParaDict[@"timestamp"] intValue];
+//                                                               req.package             = self.viewModel.wxPayParaDict[@"package"];;
+//                                                               req.sign                = self.viewModel.wxPayParaDict[@"sign"];
+//                                                               
+//                                                               [WXApi sendReq:req];
                                                                
                                                            }else{
                                                                

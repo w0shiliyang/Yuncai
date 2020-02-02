@@ -10,15 +10,16 @@
 #import <objc/message.h>
 #import "BGSqlite.h"
 
+#define bg_getIgnoreKeys [BGTool executeSelector:bg_ignoreKeysSelector modelClass:[self class]]
 
 @implementation NSObject (BGModel)
 
 //分类中只生成属性get,set函数的声明,没有声称其实现,所以要自己实现get,set函数.
--(NSNumber*)ID{
+-(NSNumber *)bg_id{
     return objc_getAssociatedObject(self, _cmd);
 }
--(void)setID:(NSNumber*)ID{
-    objc_setAssociatedObject(self,@selector(ID),ID,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+-(void)setBg_id:(NSNumber *)bg_id{
+    objc_setAssociatedObject(self,@selector(bg_id),bg_id,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 //-(NSString *)createTime{
@@ -41,53 +42,44 @@
  @debug YES:打印调试信息, NO:不打印调试信息.
  */
 void bg_setDebug(BOOL debug){
-    if ([BGSqlite shareInstance].debug != debug){//防止重复设置.
+    if([BGSqlite shareInstance].debug != debug){//防止重复设置.
         [BGSqlite shareInstance].debug = debug;
     }
 }
 
+/**
+ 设置数据库目录
+ @directory 目录名称(默认BGSqlite).
+ */
+void bg_setSqliteDirectory(NSString* directory){
+    if(![directory isEqualToString:[BGSqlite shareInstance].sqliteDirectoryName]) {
+        [BGSqlite shareInstance].sqliteDirectoryName = directory;
+    }
+}
 
 /**
  存储.
  */
 -(BOOL)bg_save{
-    return [BGSqlite insert:self];
+    return [BGSqlite insert:self ignoredKeys:bg_getIgnoreKeys];
 }
+
 /**
  存储.
- @ignoredkeys 忽略某些属性不要存.
- */
--(BOOL)bg_saveIgnoredkeys:(NSArray* const)ignorekeys{
-    return [BGSqlite insert:self ignoredKeys:ignorekeys];
-}
-/**
- 存储.
- 当有'唯一约束'时使用此API存储会更方便些,此API会自动判断如果同一约束数据已存在则更新,没有则存储.
+ 当"唯一约束"或"主键"存在时，此接口会更新旧数据,没有则存储新数据.
+ 提示：“唯一约束”优先级高于"主键".
  */
 -(BOOL)bg_saveOrUpdate{
-    return [BGSqlite insertOrUpdate:self];
+    return [BGSqlite insertOrUpdate:self ignoredKeys:bg_getIgnoreKeys];
 }
-/**
- 存储.
- 当有'唯一约束'时使用此API存储会更方便些,此API会自动判断如果数据存在则更新,没有则存储.
- @ignoredkeys 忽略某些属性不要存.
- */
--(BOOL)bg_saveOrUpdate:(NSArray* const)ignorekeys{
-    return [BGSqlite insertOrUpdate:self ignoredKeys:ignorekeys];
-}
+
 /**
  批量存储.
  */
 +(BOOL)bg_saveArray:(NSArray* const)array{
-    return [BGSqlite inserts:array];
+    return [BGSqlite inserts:array ignoredKeys:bg_getIgnoreKeys];
 }
-/**
- 批量存储.
- @ignoredkeys 忽略某些属性不要存.
- */
-+(BOOL)bg_saveArray:(NSArray* const)array ignoredkeys:(NSArray* const)ignorekeys{
-    return [BGSqlite inserts:array ignoredKeys:ignorekeys];
-}
+
 /**
  查询全部.
  */
@@ -104,14 +96,7 @@ void bg_setDebug(BOOL debug){
  更新.
  */
 -(BOOL)bg_updateWhere:(NSString*)where{
-    return [BGSqlite updateObj:self where:where];
-}
-/**
- 忽略某些属性不要更新.
- @ignoredkeys 忽略某些属性不要更新.
- */
--(BOOL)bg_updateWhere:(NSString*)where ignoredkeys:(NSArray* const)ignoredkeys{
-    return [BGSqlite updateObj:self ignoredKeys:ignoredkeys where:where];
+    return [BGSqlite updateObj:self ignoredKeys:bg_getIgnoreKeys where:where];
 }
 /**
  更新.
@@ -179,10 +164,54 @@ void bg_setDebug(BOOL debug){
     return [BGTool bg_objectWithClass:[self class] value:dictionary];
 }
 /**
+ 直接传数组批量处理;
+ 注:array中的元素是字典,否则出错.
+ */
++(NSArray*)bg_objectArrayWithKeyValuesArray:(NSArray* const)array{
+    NSMutableArray* results = [NSMutableArray array];
+    for (id value in array) {
+        id obj = [BGTool bg_objectWithClass:[self class] value:value];
+        [results addObject:obj];
+    }
+    return results;
+}
+/**
  模型转字典.
  @ignoredKeys 忽略掉模型中的哪些key(即模型变量)不要转,nil时全部转成字典.
  */
 -(NSMutableDictionary*)bg_keyValuesIgnoredKeys:(NSArray*)ignoredKeys{
     return [BGTool bg_keyValuesWithObject:self ignoredKeys:ignoredKeys];
+}
+
+
+#warning mark 过期方法(能正常使用,但不建议使用)
+/**
+ 存储.
+ @ignoredkeys 忽略某些属性不要存.
+ */
+-(BOOL)bg_saveIgnoredkeys:(NSArray* const)ignorekeys{
+    return [BGSqlite insert:self ignoredKeys:ignorekeys];
+}
+/**
+ 存储.
+ 当有'唯一约束'时使用此API存储会更方便些,此API会自动判断如果数据存在则更新,没有则存储.
+ @ignoredkeys 忽略某些属性不要存.
+ */
+-(BOOL)bg_saveOrUpdate:(NSArray* const)ignorekeys{
+    return [BGSqlite insertOrUpdate:self ignoredKeys:ignorekeys];
+}
+/**
+ 批量存储.
+ @ignoredkeys 忽略某些属性不要存.
+ */
++(BOOL)bg_saveArray:(NSArray* const)array ignoredkeys:(NSArray* const)ignorekeys{
+    return [BGSqlite inserts:array ignoredKeys:ignorekeys];
+}
+/**
+ 忽略某些属性不要更新.
+ @ignoredkeys 忽略某些属性不要更新.
+ */
+-(BOOL)bg_updateWhere:(NSString*)where ignoredkeys:(NSArray* const)ignoredkeys{
+    return [BGSqlite updateObj:self ignoredKeys:ignoredkeys where:where];
 }
 @end

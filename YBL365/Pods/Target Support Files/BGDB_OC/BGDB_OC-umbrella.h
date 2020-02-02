@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "BGDB.h"
 #import "BGModelInfo.h"
 #import "BGPropertyInfo.h"
 #import "BGSqlite.h"

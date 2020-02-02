@@ -39,26 +39,26 @@
     };
     [imageView yy_setImageWithURL:imageURL placeholder:placeholder options:kNilOptions progress:progressBlock transform:nil completion:completionBlock];
     */
-    SDWebImageDownloaderProgressBlock progressBlock = ^(NSInteger receivedSize, NSInteger expectedSize) {
-        if (progress) {
-            progress(receivedSize, expectedSize);
-        }
-    };
-    SDWebImageCompletionBlock completionBlock = ^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        if (completion) {
-            completion(image, imageURL, YES, error);
-        }
-    };
-    [imageView sd_setImageWithURL:imageURL
-                 placeholderImage:[UIImage imageNamed:smallImagePlaceholder]
-                          options:kNilOptions
-                         progress:progressBlock
-                        completed:completionBlock];
+//    SDWebImageDownloaderProgressBlock progressBlock = ^(NSInteger receivedSize, NSInteger expectedSize) {
+//        if (progress) {
+//            progress(receivedSize, expectedSize);
+//        }
+//    };
+//    SDWebImageCompletionBlock completionBlock = ^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        if (completion) {
+//            completion(image, imageURL, YES, error);
+//        }
+//    };
+//    [imageView sd_setImageWithURL:imageURL
+//                 placeholderImage:[UIImage imageNamed:smallImagePlaceholder]
+//                          options:kNilOptions
+//                         progress:progressBlock
+//                        completed:completionBlock];
 }
 
 - (void)cancelImageRequestForImageView:(UIImageView *)imageView {
 //    [imageView yy_cancelCurrentImageRequest];
-    [imageView sd_cancelCurrentImageLoad];
+//    [imageView sd_cancelCurrentImageLoad];
 }
 
 - (UIImage *)imageFromMemoryForURL:(NSURL *)url {
@@ -67,9 +67,10 @@
     NSString *key = [manager cacheKeyForURL:url];
     return [manager.cache getImageForKey:key withType:YYImageCacheTypeMemory];
      */
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    NSString *key = [manager cacheKeyForURL:url];
-    return [manager.imageCache imageFromMemoryCacheForKey:key];
+//    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+//    NSString *key = [manager cacheKeyForURL:url];
+//    return [manager.imageCache imageFromMemoryCacheForKey:key];
+    return [UIImage imageNamed:@""];
 }
 
 @end

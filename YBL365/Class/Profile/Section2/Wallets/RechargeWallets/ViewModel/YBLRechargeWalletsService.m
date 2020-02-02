@@ -157,16 +157,16 @@
                 if([WXApi isWXAppInstalled]) // 判断 用户是否安装微信
                 {
                     //调起微信支付
-                    PayReq* req             = [[PayReq alloc] init];
-                    req.openID              = self.viewModel.payOrderModel.pay_url[@"appid"];
-                    req.partnerId           = self.viewModel.payOrderModel.pay_url[@"partnerid"];
-                    req.prepayId            = self.viewModel.payOrderModel.pay_url[@"prepayid"];
-                    req.nonceStr            = self.viewModel.payOrderModel.pay_url[@"noncestr"];
-                    req.timeStamp           = (UInt32)[self.viewModel.payOrderModel.pay_url[@"timestamp"] intValue];
-                    req.package             = self.viewModel.payOrderModel.pay_url[@"package"];;
-                    req.sign                = self.viewModel.payOrderModel.pay_url[@"sign"];
-                    
-                    [WXApi sendReq:req];
+//                    PayReq* req             = [[PayReq alloc] init];
+//                    req.openID              = self.viewModel.payOrderModel.pay_url[@"appid"];
+//                    req.partnerId           = self.viewModel.payOrderModel.pay_url[@"partnerid"];
+//                    req.prepayId            = self.viewModel.payOrderModel.pay_url[@"prepayid"];
+//                    req.nonceStr            = self.viewModel.payOrderModel.pay_url[@"noncestr"];
+//                    req.timeStamp           = (UInt32)[self.viewModel.payOrderModel.pay_url[@"timestamp"] intValue];
+//                    req.package             = self.viewModel.payOrderModel.pay_url[@"package"];;
+//                    req.sign                = self.viewModel.payOrderModel.pay_url[@"sign"];
+//                    
+//                    [WXApi sendReq:req];
                     
                 }else{
                     

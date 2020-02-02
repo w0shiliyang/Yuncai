@@ -1422,11 +1422,12 @@ static NSMutableArray *_buyer_orderManager;
 
 + (NSString *)getCachImageSize
 {
-    NSInteger tmpSize = [[SDImageCache sharedImageCache] getSize];
-    YYImageCache *cache = [YYWebImageManager sharedManager].cache;
-    NSUInteger allCount = cache.memoryCache.totalCost+cache.diskCache.totalCost;
-    NSString * currentVolum = [NSString stringWithFormat:@"%@",[self fileSizeWithInterge:tmpSize+allCount]];
-    return currentVolum;
+//    NSInteger tmpSize = [[SDImageCache sharedImageCache] getSize];
+//    YYImageCache *cache = [YYWebImageManager sharedManager].cache;
+//    NSUInteger allCount = cache.memoryCache.totalCost+cache.diskCache.totalCost;
+//    NSString * currentVolum = [NSString stringWithFormat:@"%@",[self fileSizeWithInterge:tmpSize+allCount]];
+//    return currentVolum;
+    return @"";
 }
 
 + (NSString *)fileSizeWithInterge:(NSInteger)size{
@@ -1449,8 +1450,8 @@ static NSMutableArray *_buyer_orderManager;
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [SVProgressHUD showWithStatus:@"清除中..."];
-        [[SDImageCache sharedImageCache] clearDisk];
-        [[SDImageCache sharedImageCache] clearMemory];
+//        [[SDImageCache sharedImageCache] clearDisk];
+//        [[SDImageCache sharedImageCache] clearMemory];
         YYImageCache *cache = [YYWebImageManager sharedManager].cache;
         [cache.memoryCache removeAllObjects];
         [cache.diskCache removeAllObjects];

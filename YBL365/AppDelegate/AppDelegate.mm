@@ -19,7 +19,7 @@
 #import "YBLStoreViewController.h"
 #import "YBLPurchaseOutPriceRecordsVC.h"
 // 引入JPush功能所需头文件
-#import "JPUSHService.h"
+//#import "JPUSHService.h"
 // iOS10注册APNs所需头文件
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
@@ -31,7 +31,7 @@
 //#import <FBMemoryProfiler/FBMemoryProfiler.h>
 #endif
 
-@interface AppDelegate ()<WXApiDelegate,JPUSHRegisterDelegate>
+@interface AppDelegate ()<WXApiDelegate>
 
 #if DEBUG
 //@property (nonatomic , strong) FBMemoryProfiler * memoryProfiler;
@@ -71,21 +71,21 @@
 
     //Required
     //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        
-    }
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+//    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+//    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+//        
+//    }
+//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
     
 //    NSDictionary *dictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     
     // Required
-    [JPUSHService setupWithOption:launchOptions
-                           appKey:Jiguang_Key
-                          channel:@"App Store"
-                 apsForProduction:isProduction
-            advertisingIdentifier:nil];
+//    [JPUSHService setupWithOption:launchOptions
+//                           appKey:Jiguang_Key
+//                          channel:@"App Store"
+//                 apsForProduction:isProduction
+//            advertisingIdentifier:nil];
     
     //Signal handle
 //    [YBLSignalHandler RegisterSignalHandler];
@@ -98,7 +98,7 @@
 }
 
 - (void)cleanNotNum{
-    [JPUSHService resetBadge];
+//    [JPUSHService resetBadge];
     [YBLMethodTools cleanNotificationNumber];
 }
 
@@ -107,7 +107,7 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     // Required, iOS 7 Support
-    [JPUSHService handleRemoteNotification:userInfo];
+//    [JPUSHService handleRemoteNotification:userInfo];
     
     completionHandler(UIBackgroundFetchResultNewData);
 }
@@ -117,7 +117,7 @@
 #pragma mark- JPUSHRegisterDelegate // 2.1.9版新增JPUSHRegisterDelegate,需实现以下两个方法
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     // iOS 10 以下 Required
-    [JPUSHService handleRemoteNotification:userInfo];
+//    [JPUSHService handleRemoteNotification:userInfo];
 }
 
 // iOS 10 Support
@@ -125,7 +125,7 @@
     // Required
     NSDictionary * userInfo = notification.request.content.userInfo;
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
+//        [JPUSHService handleRemoteNotification:userInfo];
     }
     else {
         // 本地通知
@@ -139,7 +139,7 @@
     // Required
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
+//        [JPUSHService handleRemoteNotification:userInfo];
     }
     else {
         // 本地通知
@@ -220,11 +220,11 @@
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     /// Required - 注册 DeviceToken
     NSLog(@"deviceToken:%@",deviceToken);
-    [JPUSHService registerDeviceToken:deviceToken];
-    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
-        [[NSUserDefaults standardUserDefaults]setObject:registrationID forKey:@"registrationID"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
-    }];
+//    [JPUSHService registerDeviceToken:deviceToken];
+//    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+//        [[NSUserDefaults standardUserDefaults]setObject:registrationID forKey:@"registrationID"];
+//        [[NSUserDefaults standardUserDefaults]synchronize];
+//    }];
 
 }
 
@@ -278,16 +278,16 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 - (void)onResp:(BaseResp *)resp{
     
-    if([resp isKindOfClass:[PayResp class]]){
-        BOOL result = NO;
-        switch (resp.errCode) {
-            case WXSuccess:{
-                result = YES;
-            }
-                break;
-        }
-        [[NSNotificationCenter defaultCenter] postNotificationName:WX_PAY_NOTIFICATION_NAME object:nil userInfo:@{@"result":@(result)}];
-    }
+//    if([resp isKindOfClass:[PayResp class]]){
+//        BOOL result = NO;
+//        switch (resp.errCode) {
+//            case WXSuccess:{
+//                result = YES;
+//            }
+//                break;
+//        }
+//        [[NSNotificationCenter defaultCenter] postNotificationName:WX_PAY_NOTIFICATION_NAME object:nil userInfo:@{@"result":@(result)}];
+//    }
     
 }
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler {

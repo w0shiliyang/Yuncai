@@ -1,6 +1,8 @@
 source 'https://github.com/artsy/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
+xcodeproj '手机云采.xcodeproj'
+
 platform :ios, '8.0'
 target ‘YC168’ do
     use_frameworks!

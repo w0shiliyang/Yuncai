@@ -119,64 +119,64 @@ BMKMapManager* _mapManager;
     [TalkingData sessionStarted:TalkData_Key withChannelId:@"App Store"];
 
     /*WX*/
-    [WXApi registerApp:WX_Key withDescription:@"yuncai_wxpay"];
+//    [WXApi registerApp:WX_Key withDescription:@"yuncai_wxpay"];
     
     /* Share SDK */
-    [ShareSDK registerApp:ShareSDK_Key
-          activePlatforms:@[
-                            @(SSDKPlatformTypeCopy),
-                            @(SSDKPlatformTypeMail),
-                            @(SSDKPlatformTypeSMS),
-                            @(SSDKPlatformTypeAliPaySocial),
-                            @(SSDKPlatformTypeAliPaySocialTimeline),
-                            @(SSDKPlatformTypeWechat),
-                            @(SSDKPlatformSubTypeWechatTimeline),
-                            @(SSDKPlatformSubTypeQQFriend),
-                            @(SSDKPlatformSubTypeQZone)]
-                 onImport:^(SSDKPlatformType platformType)
-     {
-         switch (platformType)
-         {
-             case SSDKPlatformTypeWechat:
-                 [ShareSDKConnector connectWeChat:[WXApi class]];
-                 break;
-             case SSDKPlatformTypeQQ:
-                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-                 break;
-             case SSDKPlatformTypeAliPaySocial:
-                 [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
-                 break;
-
-             default:
-                 break;
-         }
-     }
-          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
-     {
-         
-         switch (platformType)
-         {
-             case SSDKPlatformTypeSinaWeibo:
-                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
-//                 [appInfo SSDKSetupSinaWeiboByAppKey:SINA_Key
-//                                           appSecret:SINA_Secret
-//                                         redirectUri:@"http://www.sharesdk.cn"
-//                                            authType:SSDKAuthTypeBoth];
-                 [appInfo SSDKSetupAliPaySocialByAppId:AP_Key];
-                 break;
-             case SSDKPlatformTypeWechat:
-                 [appInfo SSDKSetupWeChatByAppId:WX_Key
-                                       appSecret:WX_Secret];
-                 break;
-             case SSDKPlatformTypeQQ:
-                 [appInfo SSDKSetupQQByAppId:QQ_Key
-                                      appKey:QQ_Secret
-                                    authType:SSDKAuthTypeBoth];
-                 break;
-             default:
-                 break;
-         }
-     }];
+//    [ShareSDK registerApp:ShareSDK_Key
+//          activePlatforms:@[
+//                            @(SSDKPlatformTypeCopy),
+//                            @(SSDKPlatformTypeMail),
+//                            @(SSDKPlatformTypeSMS),
+//                            @(SSDKPlatformTypeAliPaySocial),
+//                            @(SSDKPlatformTypeAliPaySocialTimeline),
+//                            @(SSDKPlatformTypeWechat),
+//                            @(SSDKPlatformSubTypeWechatTimeline),
+//                            @(SSDKPlatformSubTypeQQFriend),
+//                            @(SSDKPlatformSubTypeQZone)]
+//                 onImport:^(SSDKPlatformType platformType)
+//     {
+//         switch (platformType)
+//         {
+//             case SSDKPlatformTypeWechat:
+//                 [ShareSDKConnector connectWeChat:[WXApi class]];
+//                 break;
+//             case SSDKPlatformTypeQQ:
+//                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+//                 break;
+//             case SSDKPlatformTypeAliPaySocial:
+//                 [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
+//                 break;
+//
+//             default:
+//                 break;
+//         }
+//     }
+//          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+//     {
+//
+//         switch (platformType)
+//         {
+//             case SSDKPlatformTypeSinaWeibo:
+//                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+////                 [appInfo SSDKSetupSinaWeiboByAppKey:SINA_Key
+////                                           appSecret:SINA_Secret
+////                                         redirectUri:@"http://www.sharesdk.cn"
+////                                            authType:SSDKAuthTypeBoth];
+//                 [appInfo SSDKSetupAliPaySocialByAppId:AP_Key];
+//                 break;
+//             case SSDKPlatformTypeWechat:
+//                 [appInfo SSDKSetupWeChatByAppId:WX_Key
+//                                       appSecret:WX_Secret];
+//                 break;
+//             case SSDKPlatformTypeQQ:
+//                 [appInfo SSDKSetupQQByAppId:QQ_Key
+//                                      appKey:QQ_Secret
+//                                    authType:SSDKAuthTypeBoth];
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }];
     /**
      *  HUD 设置
      */
@@ -189,7 +189,7 @@ BMKMapManager* _mapManager;
      *  键盘
      */
     [IQKeyboardManager sharedManager].previousNextDisplayMode = IQPreviousNextDisplayModeAlwaysHide;
-    [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = NO;
+//    [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = NO;
     [IQKeyboardManager sharedManager].toolbarDoneBarButtonItemText = @"完成";
     [IQKeyboardManager sharedManager].toolbarTintColor = YBLColor(40, 40, 40, 1);
     /**
@@ -255,8 +255,8 @@ BMKMapManager* _mapManager;
         }];
     });
  
-    [[SDImageCache sharedImageCache] setShouldDecompressImages:NO];
-    [[SDWebImageDownloader sharedDownloader] setShouldDecompressImages:NO];
+//    [[SDImageCache sharedImageCache] setShouldDecompressImages:NO];
+//    [[SDWebImageDownloader sharedDownloader] setShouldDecompressImages:NO];
     // 从全局的 queue pool 中获取一个 queue
 //    dispatch_queue_t queue = YYDispatchQueueGetForQOS(NSQualityOfServiceUtility);
 //    

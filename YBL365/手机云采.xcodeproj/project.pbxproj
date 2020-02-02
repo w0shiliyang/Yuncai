@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086BE83C92B6D0B15FD99B62 /* Pods_YC168.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF2A473EB350EBA9F1F3045 /* Pods_YC168.framework */; };
 		540089161E5FF70800F5C049 /* YBLAddGoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 540089151E5FF70800F5C049 /* YBLAddGoodListViewController.m */; };
 		540089191E5FF76300F5C049 /* YBLAddGoodListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 540089181E5FF76300F5C049 /* YBLAddGoodListService.m */; };
 		5400891C1E5FF77200F5C049 /* YBLAddGoodListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5400891B1E5FF77200F5C049 /* YBLAddGoodListViewModel.m */; };
@@ -388,7 +387,6 @@
 		549AFB641E90941D0020122F /* YBLGoodParameterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AFB631E90941D0020122F /* YBLGoodParameterView.m */; };
 		549AFB671E90EDF60020122F /* YBLPurchaseDataCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AFB661E90EDF60020122F /* YBLPurchaseDataCountModel.m */; };
 		549AFB6D1E9104BE0020122F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AFB6B1E9104BE0020122F /* iCarousel.m */; };
-		549AFB6E1E9104BE0020122F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 549AFB6C1E9104BE0020122F /* Info.plist */; };
 		549B61ED1EA4640300FA0868 /* YBLFourLevelAddressHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B61EC1EA4640300FA0868 /* YBLFourLevelAddressHeaderView.m */; };
 		549B61F01EA46EB200FA0868 /* YBLFourLevelAddressItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B61EF1EA46EB200FA0868 /* YBLFourLevelAddressItemCollectionView.m */; };
 		549B61F31EA4952900FA0868 /* YBLFourLevelAddressItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B61F21EA4952900FA0868 /* YBLFourLevelAddressItemCell.m */; };
@@ -523,7 +521,6 @@
 		54B3F55E1EA8BF1E004CCDCF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3F55D1EA8BF1E004CCDCF /* OpenGLES.framework */; };
 		54B3F5601EA8BF34004CCDCF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3F55F1EA8BF34004CCDCF /* Security.framework */; };
 		54B3F5621EA8C003004CCDCF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3F5611EA8C003004CCDCF /* CoreTelephony.framework */; };
-		54B3F5641EA8C01E004CCDCF /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3F5631EA8C01E004CCDCF /* libstdc++.6.0.9.tbd */; };
 		54B3F5661EA8C032004CCDCF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3F5651EA8C032004CCDCF /* libsqlite3.0.tbd */; };
 		54B3F56E1EA8C2B1004CCDCF /* YBLBMLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B3F56D1EA8C2B1004CCDCF /* YBLBMLocationViewController.m */; };
 		54B3F5711EA8C2C7004CCDCF /* YBLBMLocationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B3F5701EA8C2C7004CCDCF /* YBLBMLocationViewModel.m */; };
@@ -738,6 +735,8 @@
 		8110ACA81E0FB097007A256A /* YBLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C884C5E1E05223900B6DCE3 /* YBLNavigationViewController.m */; };
 		81F25DC51E0B7AEE00483096 /* YBLCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4F79F1E08024E00677F4B /* YBLCategoryViewController.m */; };
 		81F25DC61E0B7B1300483096 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 54454D901E0528EA006CCBE7 /* UIView+YYAdd.m */; };
+		A49B8AB31D662818E9FED049 /* Pods_YC168.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF2A473EB350EBA9F1F3045 /* Pods_YC168.framework */; };
+		B6D8F64523E673200066CE6B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E167831EEBCBB000DD6B87 /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1579,7 +1578,6 @@
 		549AFB661E90EDF60020122F /* YBLPurchaseDataCountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLPurchaseDataCountModel.m; sourceTree = "<group>"; };
 		549AFB6A1E9104BE0020122F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		549AFB6B1E9104BE0020122F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		549AFB6C1E9104BE0020122F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		549B61EB1EA4640300FA0868 /* YBLFourLevelAddressHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLFourLevelAddressHeaderView.h; sourceTree = "<group>"; };
 		549B61EC1EA4640300FA0868 /* YBLFourLevelAddressHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLFourLevelAddressHeaderView.m; sourceTree = "<group>"; };
 		549B61EE1EA46EB200FA0868 /* YBLFourLevelAddressItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLFourLevelAddressItemCollectionView.h; sourceTree = "<group>"; };
@@ -2269,6 +2267,7 @@
 				54E167841EEBCBB000DD6B87 /* libc++.tbd in Frameworks */,
 				54E167821EEBCB9E00DD6B87 /* CoreMotion.framework in Frameworks */,
 				54B3F5621EA8C003004CCDCF /* CoreTelephony.framework in Frameworks */,
+				B6D8F64523E673200066CE6B /* libc++.tbd in Frameworks */,
 				54E167801EEBCB9100DD6B87 /* AdSupport.framework in Frameworks */,
 				54BAC6161EE596C30060675D /* SystemConfiguration.framework in Frameworks */,
 				54BAC6141EE596BB0060675D /* CFNetwork.framework in Frameworks */,
@@ -2281,14 +2280,13 @@
 				54B3F55C1EA8BF11004CCDCF /* CoreLocation.framework in Frameworks */,
 				54B3F5601EA8BF34004CCDCF /* Security.framework in Frameworks */,
 				54B3F5661EA8C032004CCDCF /* libsqlite3.0.tbd in Frameworks */,
-				54B3F5641EA8C01E004CCDCF /* libstdc++.6.0.9.tbd in Frameworks */,
 				548B36A61E4B1EDF00A1E51E /* CoreImage.framework in Frameworks */,
 				5445622E1E16452C00A3D110 /* MessageUI.framework in Frameworks */,
 				547C00FD1E82671D0018796A /* libcrypto.a in Frameworks */,
 				547C00FE1E82671D0018796A /* libssl.a in Frameworks */,
 				54E1677E1EEBCB6300DD6B87 /* libTalkingData.a in Frameworks */,
 				544562221E1644F800A3D110 /* libicucore.tbd in Frameworks */,
-				086BE83C92B6D0B15FD99B62 /* Pods_YC168.framework in Frameworks */,
+				A49B8AB31D662818E9FED049 /* Pods_YC168.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5354,7 +5352,6 @@
 			children = (
 				549AFB6A1E9104BE0020122F /* iCarousel.h */,
 				549AFB6B1E9104BE0020122F /* iCarousel.m */,
-				549AFB6C1E9104BE0020122F /* Info.plist */,
 			);
 			path = iCarousel;
 			sourceTree = "<group>";
@@ -7901,7 +7898,7 @@
 				TargetAttributes = {
 					54454D1E1E04D589006CCBE7 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 56L6Z86U93;
+						DevelopmentTeam = K9X5AAY2EF;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -7923,8 +7920,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 54454D161E04D589006CCBE7;
 			productRefGroup = 54454D201E04D589006CCBE7 /* Products */;
@@ -7957,7 +7956,6 @@
 				548B367B1E4978B800A1E51E /* City.plist in Resources */,
 				54454D321E04D589006CCBE7 /* LaunchScreen.storyboard in Resources */,
 				54E4F7881E07737300677F4B /* Assets.xcassets in Resources */,
-				549AFB6E1E9104BE0020122F /* Info.plist in Resources */,
 				54C6DAAF1F0F919E004F59DD /* cart.mp3 in Resources */,
 				54DD649E1ED725B0002F6134 /* LaunchIntrudutionImage1.png in Resources */,
 			);
@@ -7972,13 +7970,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YC168-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		54A119CB1EA2236500B1E0BC /* ShellScript */ = {
@@ -8013,13 +8014,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YC168/Pods-YC168-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
+				"${PODS_ROOT}/Bugtags/Bugtags.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Bugtags.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YC168/Pods-YC168-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YC168/Pods-YC168-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3853794EDC3A893965402AC /* [CP] Embed Pods Frameworks */ = {
@@ -8028,13 +8038,56 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YC168/Pods-YC168-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BGDB_OC/BGDB_OC.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/HMImagePicker/HMImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Wonderful/Wonderful.framework",
+				"${BUILT_PRODUCTS_DIR}/YYAsyncLayer/YYAsyncLayer.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BGDB_OC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Wonderful.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYAsyncLayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YC168/Pods-YC168-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YC168/Pods-YC168-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -8860,16 +8913,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52E7F67157AD5D0E42763A48 /* Pods-YC168.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = YC168.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tongxin Qiao (WRP9P4R649)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tongxin Qiao (WRP9P4R649)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 56L6Z86U93;
+				DEVELOPMENT_TEAM = K9X5AAY2EF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8892,12 +8945,12 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danshui.yuncai;
+				PRODUCT_BUNDLE_IDENTIFIER = www.weipaitang.com.WeiPaiTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a9ab8a61-8559-4d55-af7a-020f7dca3105";
-				PROVISIONING_PROFILE_SPECIFIER = Yuncai_Development;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = WeiPaiTang_developer;
 				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				USE_HEADERMAP = NO;
 			};
@@ -8907,17 +8960,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5622AAC621DF65C33FF19CF4 /* Pods-YC168.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = YC168.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Henan freshwater information technology co., LTD (56L6Z86U93)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Henan freshwater information technology co., LTD (56L6Z86U93)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 56L6Z86U93;
+				DEVELOPMENT_TEAM = K9X5AAY2EF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8940,12 +8993,12 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danshui.yuncai;
+				PRODUCT_BUNDLE_IDENTIFIER = www.weipaitang.com.WeiPaiTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cfe29cee-3356-4ea4-9c7d-0de73c7786bb";
-				PROVISIONING_PROFILE_SPECIFIER = Yuncai_Distribution;
+				PROVISIONING_PROFILE_SPECIFIER = WeiPaiTang_developer;
 				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				USE_HEADERMAP = NO;
 			};
